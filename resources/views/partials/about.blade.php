@@ -125,7 +125,7 @@
 
                         <a
                             href="{{ $resumePdf }}"
-                            download="{{ basename($siteSetting->resume_pdf) }}"
+                            download="Adriel_Perez_Resume.pdf"
                             class="group mt-6 inline-flex items-center justify-center
                                 gap-4 rounded-full
                                 bg-[#F5821F]
