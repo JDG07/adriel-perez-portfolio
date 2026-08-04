@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\SiteSetting; // Adjust if your model path is different
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,11 +16,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
+        // 1. Create Default User
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+        ]);
+
+        // 2. Seed Site Settings (Prevents the hero_bg_video null error)
+        SiteSetting::create([
+            'hero_bg_video' => null, // or provide a default video URL/path
+            // Add other required site_settings columns here
         ]);
     }
 }
