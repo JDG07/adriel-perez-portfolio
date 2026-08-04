@@ -26,6 +26,8 @@ COPY . .
 
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 RUN npm install && npm run build
+RUN chmod -R 775 storage bootstrap/cache
+RUN chown -R www-data:www-data storage bootstrap/cache
 
 EXPOSE 8080
 
