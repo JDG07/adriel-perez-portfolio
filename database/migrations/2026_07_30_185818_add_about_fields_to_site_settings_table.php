@@ -10,17 +10,29 @@ return new class extends Migration
     {
         Schema::table('site_settings', function (Blueprint $table) {
 
-            $table->string('about_heading')->nullable();
+            if (!Schema::hasColumn('site_settings', 'about_heading')) {
+                $table->string('about_heading')->nullable();
+            }
 
-            $table->string('about_image')->nullable();
+            if (!Schema::hasColumn('site_settings', 'about_image')) {
+                $table->string('about_image')->nullable();
+            }
 
-            $table->text('about_paragraph_1')->nullable();
+            if (!Schema::hasColumn('site_settings', 'about_paragraph_1')) {
+                $table->text('about_paragraph_1')->nullable();
+            }
 
-            $table->text('about_paragraph_2')->nullable();
+            if (!Schema::hasColumn('site_settings', 'about_paragraph_2')) {
+                $table->text('about_paragraph_2')->nullable();
+            }
 
-            $table->text('about_paragraph_3')->nullable();
+            if (!Schema::hasColumn('site_settings', 'about_paragraph_3')) {
+                $table->text('about_paragraph_3')->nullable();
+            }
 
-            $table->text('about_tags')->nullable();
+            if (!Schema::hasColumn('site_settings', 'about_tags')) {
+                $table->text('about_tags')->nullable();
+            }
 
         });
     }
