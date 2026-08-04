@@ -68,7 +68,7 @@
 
                 <a
                     href="{{ asset('storage/'.$siteSetting->resume_pdf) }}"
-                    download="Adriel_Perez_Resume.pdf"
+                    download="{{ $siteSetting->name ?? 'Adriel_Perez' }}_Resume.pdf"
                     class="text-[#606060] underline hover:text-orange-400">
 
                     {{ $siteSetting->resume_button_text }}
