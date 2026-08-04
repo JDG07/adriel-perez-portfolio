@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     {{-- Favicon --}}
-    @if($siteSetting && $siteSetting->hero_logo)
-        <link rel="icon" type="image/png" href="{{ asset('storage/'.$siteSetting->hero_logo) }}">
-    @endif
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 
     <title>
         @yield('title', 'Adriel Perez')
