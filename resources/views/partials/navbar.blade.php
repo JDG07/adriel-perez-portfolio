@@ -40,7 +40,7 @@
                 'about' => 'About Me',
                 'tools' => 'Design Tools',
                 'projects' => 'Design Projects',
-                'reviews' => 'Reviews',
+                'testimonials' => 'Reviews',
                 'contact' => 'Contact Me'
             ] as $id => $label)
 
@@ -122,7 +122,7 @@
             'about' => 'About Me',
             'tools' => 'Design Tools',
             'projects' => 'Design Projects',
-            'reviews' => 'Reviews',
+            'testimonials' => 'Reviews',
             'contact' => 'Contact Me'
         ] as $id => $label)
 
